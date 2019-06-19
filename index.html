@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Link to CSS-->
-    <!-- <link rel="stylesheet" href=""> -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+  <!-- Link to CSS-->
+  <!-- <link rel="stylesheet" href=""> -->
 
-    <title>GifTastic!</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+  <title>GifTastic!</title>
 
-    <!-- <style>
-        body {
-            background-image: url("assets/images/record.jpg");
-            background-size: cover;
-            height: 100%;
-        }
-    </style> -->
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
 
-  <body>
-    ERINLAAAAAAA
-    <div class="container">
-      <form>
-        <div class="form-group">
-          <label for="user-input">Add a TV show.</label>
-          <input
-            type="text"
-            class="form-control"
-            id="user-input"
-            aria-describedby="emailHelp"
-            placeholder="TV show name"
-          />
-        </div>
-        <button type="submit" id="submit" class="btn btn-primary">
-          Submit
-        </button>
-      </form>
+  <style>
+    body {
 
-      <div id="buttons-appear-here"></div>
-      <div id="gifs-appear-here"></div>
+      background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%) fixed,
+        linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%) fixed,
+        linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%) fixed;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-md-center mx-0 my-0 text-center">
+      <div class="col-md-8">
+        <img src="giftastic.png" style="width:400px;height:300px;">
+      </div>
     </div>
-  </body>
+    <div class="row justify-content-md-center my-0 mx-0">
+      <div class="col-md-8">
+        <form>
+          <div class="form-group text-white h4">
+            <label for="user-input">Add a TV show:</label>
+            <input type="text" class="form-control" id="user-input" aria-describedby="emailHelp"
+              placeholder="TV show name" />
+          </div>
+          <button type="submit" id="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-md-center mb-5 mt-5 text-center">
+      <div class="col-md-8">
+        <p class="text-white mb-0 h5">Click the buttons below to see gifs from your favorite shows!</p>
+        <p class="text-white mt-0 mb-2 h5">Click the gif to toggle between still and animated.</p>
+        <div id="buttons-appear-here" class="mt-7 px-4"></div>
+        <div id="gifs-appear-here" class="text-white mt-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

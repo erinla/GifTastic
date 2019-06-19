@@ -1,11 +1,11 @@
-$(document).ready(function() {
-  var tvShows = ['new girl', 'the office'];
+$(document).ready(function () {
+  var tvShows = ['new girl', 'the office', 'brooklyn 99', 'parks and rec', 'seinfeld', '30 rock', 'how i met your mother', 'modern family', 'the good place'];
 
   function addButtons() {
     $('#buttons-appear-here').empty();
     for (var i = 0; i < tvShows.length; i++) {
       var addButton = $('<button>');
-      addButton.addClass('tv-show');
+      addButton.addClass('tv-show', 'text-info');
       addButton.attr('data-program', tvShows[i]);
       addButton.text(tvShows[i]);
       $('#buttons-appear-here').append(addButton);
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   addButtons();
 
-  $('#submit').on('click', function(event) {
+  $('#submit').on('click', function (event) {
     event.preventDefault();
     var tvShow = $('#user-input')
       .val()
@@ -23,7 +23,7 @@ $(document).ready(function() {
     addButtons();
   });
 
-  $(document).on('click', '.tv-show', function() {
+  $(document).on('click', '.tv-show', function () {
     $('#gifs-appear-here').empty();
     var program = $(this).attr('data-program');
     var queryURL =
@@ -33,9 +33,9 @@ $(document).ready(function() {
     $.ajax({
       url: queryURL,
       method: 'GET'
-    }).then(function(response) {
+    }).then(function (response) {
       var results = response.data;
-      for (var i = 0; i < 5; i++) {
+      for (var i = 0; i < 8; i++) {
         var gifDiv = $('<div>');
         var rating = results[i].rating;
         var p = $('<p>').text('Rating: ' + rating);
@@ -56,7 +56,7 @@ $(document).ready(function() {
     });
   });
 
-  $(document).on('click', '.gifImage', function() {
+  $(document).on('click', '.gifImage', function () {
     var state = $(this).attr('data-state');
     if (state === 'still') {
       $(this).attr('src', $(this).attr('data-animate'));
